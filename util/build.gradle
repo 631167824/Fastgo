@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+
+    repositories {
+        jcenter()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'org.jsoup:jsoup:1.10.2'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:design:26.1.0'
+    compile project(':glide')
+    compile 'com.wang.avi:library:2.1.3'
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.yalantis:ucrop:1.4.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support:support-v4:26.1.0'
+    compile 'com.google.zxing:core:3.3.0'
+
+
+}

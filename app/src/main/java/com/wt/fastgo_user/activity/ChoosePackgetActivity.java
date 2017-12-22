@@ -45,6 +45,8 @@ public class ChoosePackgetActivity extends ProActivity {
     List<OrderInfo> newList;
 
     boolean isAllCheck = false;
+
+
     /**
      * 揽收点id
      */
