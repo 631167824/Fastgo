@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="@dimen/dp_8">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/kuang" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:button="@drawable/check_box_selecter"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/choose_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/checkbox"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/dp_4"
+                android:paddingStart="@dimen/dp_4"
+                android:text="运单号"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/choose_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="收件人:张三" />
+
+        <TextView
+            android:id="@+id/choose_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_name"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:text="精装三段:张三" />
+
+
+        <TextView
+            android:id="@+id/choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="时间" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

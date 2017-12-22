@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/lighter_gray" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/choose_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/dp_4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lighter_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/all_check_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_weight="1"
+            android:button="@drawable/check_box_selecter"
+            android:paddingLeft="@dimen/dp_8"
+            android:text="@string/chooae_all"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/ti_button"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_44"
+            android:background="@drawable/red_top_bg"
+            android:text="@string/choose_create"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
